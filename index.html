@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>QR Generator</title>
+
+  <script type="text/javascript" src="https://unpkg.com/qr-code-styling/lib/qr-code-styling.js"></script> 
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!--This is the result file of an Article I wrote on Medium.com -->
+  <!--You can read it at: -->
+  
+  <header id="header"><h1>F2BEAR's QR Generator</h1></header>
+
+  <section id="content">
+
+    <div>
+
+      <form id="qrForm" onsubmit="return false;">
+
+        <div class="inputContainer">
+
+          <label for="dataInput">Data</label>
+
+          <input type="text" onchange="updateQrData();" name="dataInput" id="dataInput" placeholder="https://example.com" required />
+
+        </div>
+
+        <div class="inputContainer">
+
+          <label for="imageInput">Image</label>
+
+          <input type="file" onchange="updateQrImg();" name="imageInput" id="imageInput" accept="image/*"  />
+
+        </div>  
+
+        <div class="inputContainer">
+
+          <label for="colorInput">Color</label>
+
+
+          <input type="color" onchange="updateQrColor();" name="colorInput" id="colorInput" />
+
+        </div>  
+
+        <div class="inputContainer">
+
+          <label for="typeInput">Type</label>
+
+          <select name="typeInput" id="typeInput" onchange="updateQrType();">
+
+            <option value="square">Square</option>
+
+            <option value="rounded">Rounded</option>
+
+            <option value="dots">Dots</option>
+
+          </select>
+
+        </div>  
+
+      </form>
+
+      <div>
+
+        <button id="formButton" onclick="download();">Download</button>
+
+        <label>As</label>
+
+        <select id="downloadAs" onchange="updateDownloadType();">
+
+          <option value="png">PNG</option>
+
+          <option value="jpeg">JPEG</option>
+
+          <option value="webp">WEBP</option>
+
+        </select>
+
+      </div>
+    </div>
+
+    <div id="canvas"></div>
+
+  </section>
+
+  <script type="text/javascript" src="qr.js"></script>
+
+</body>
+
+</html>

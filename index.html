@@ -19,7 +19,7 @@
 <body>
 
   <!--This is the result file of an Article I wrote on Medium.com -->
-  <!--You can read it at: -->
+  <!--You can read it at: https://medium.com/@facucarbonel_97514/how-to-create-a-qr-generator-using-javascript-4b5ce1b6ec27 -->
   
   <header id="header"><h1>F2BEAR's QR Generator</h1></header>
 
@@ -49,7 +49,6 @@
 
           <label for="colorInput">Color</label>
 
-
           <input type="color" onchange="updateQrColor();" name="colorInput" id="colorInput" />
 
         </div>  
@@ -72,23 +71,8 @@
 
       </form>
 
-      <div>
+      <button id="formButton" onclick="download();">Download</button>
 
-        <button id="formButton" onclick="download();">Download</button>
-
-        <label>As</label>
-
-        <select id="downloadAs" onchange="updateDownloadType();">
-
-          <option value="png">PNG</option>
-
-          <option value="jpeg">JPEG</option>
-
-          <option value="webp">WEBP</option>
-
-        </select>
-
-      </div>
     </div>
 
     <div id="canvas"></div>

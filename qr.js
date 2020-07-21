@@ -2,7 +2,6 @@ qrData = document.getElementById('dataInput');
 qrImage = document.getElementById('imageInput');
 qrColor = document.getElementById('colorInput');
 qrType = document.getElementById('typeInput');
-qrDownloadType = document.getElementById('downloadAs').value;
 
 const qrCode = new QRCodeStyling({
   width: 300,
@@ -24,6 +23,7 @@ const updateQrData = () => {
 
 const updateQrImg = () => {
   newQrImage = URL.createObjectURL(qrImage.files[0]);
+  console.log(newQrImage);
   qrCode.update({
     image: newQrImage
   });
@@ -47,10 +47,6 @@ const updateQrType = () => {
   });
 };
 
-const updateDownloadType = () => {
-  newQrDownloadType = qrDownloadType.value;
-};
-
-const download = () => qrCode.download(qrDownloadType);
+const download = () => qrCode.download("jpeg");
 
 qrCode.append(document.getElementById('canvas'));

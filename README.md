@@ -1,4 +1,4 @@
-# QR-Generator
+# EasyQR
 
 A simple QR code generator on JavaScript HTML adn CSS
 

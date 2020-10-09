@@ -1,5 +1,6 @@
-# QRGenerator
-A QR code generator 
+# QR-Generator
+
+A simple QR code generator on JavaScript HTML adn CSS
 
 I created this project to play around a bit with the [qr-code-styling ](https://github.com/kozakdenys/qr-code-styling) JavaScript library and I also made an article on medium that you can read [here][medium]
 

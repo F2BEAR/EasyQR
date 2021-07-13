@@ -6,14 +6,10 @@ body {
 }
 
 .dark {
-  --color-bg-primary: #121212;
-  --color-bg-secondary: #333;
+  --color-bg-primary: #22272e;
+  --color-bg-secondary: #2d333b;
   --color-bg-tertiary: #424242;
   --color-bg-button: #444444;
-  --color-bg-blure: #12121288;
-  --color-bg-error: #d63e3e;
-  --color-bg-success: #3ed63e;
-  --color-bg-warning: #d3d63e;
   --color-text-primary: #f7fafc;
   --color-text-secondary: #e2e8f0;
   --color-text-accent: #81e6d9;

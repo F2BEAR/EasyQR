@@ -3,9 +3,9 @@ import QR from './QR'
 
 function Home() {
   return (
-    <div className="content w-9/12 m-12 flex justify-center flex-row items-center">
-      <Form />
+    <div className="w-9/12 m-12 flex justify-center flex-col md:flex-row h-auto md:content items-center">
       <QR />
+      <Form />
     </div>
   )
 }

@@ -12,6 +12,9 @@ import { useDispatch } from 'react-redux'
 function Form() {
   const dispatch = useDispatch()
   const updateQrData = (value) => {
+    if (value === '' || value === null || value === undefined) {
+      value = 'https://github.com/F2BEAR'
+    }
     dispatch(updateData(value))
     qrCode.update({
       data: value
@@ -58,8 +61,8 @@ function Form() {
   }
 
   return (
-    <form className="rounded-lg shadow-lg p-10 h-2xl w-96 border-2 border-white m-3 flex flex-col justify-center items-center bg-secondary">
-      <div className="rounded-lg text-center m-3 w-80 h-16 p-6">
+    <form className="rounded-lg shadow-lg p-10 h-2xl w-max m-3 flex flex-col justify-center items-center bg-secondary">
+      <div className="rounded-lg flex flex-col items-center text-center m-3 w-80">
         <label htmlFor="dataInput">Data</label>
 
         <input
@@ -73,7 +76,7 @@ function Form() {
         />
       </div>
 
-      <div className="rounded-lg text-center m-3 w-80 h-16 p-6">
+      <div className="rounded-lg flex flex-col items-center text-center m-3 w-80">
         <label htmlFor="imageInput">Image</label>
 
         <input
@@ -86,31 +89,31 @@ function Form() {
         />
       </div>
 
-      <div className="rounded-lg text-center m-3 w-80 h-16 p-6">
+      <div className="rounded-lg flex flex-col items-center text-center m-3 w-80">
         <label htmlFor="colorInput">Color</label>
 
         <input
           type="color"
           onChange={(e) => updateQrColor(e.target.value)}
-          className="rounded-md p-2 bg-tertiary text-center"
+          className="rounded-md bg-tertiary text-center"
           name="colorInput"
           id="colorInput"
         />
       </div>
 
-      <div className="rounded-lg text-center m-3 w-80 h-16 p-6">
+      <div className="rounded-lg flex flex-col items-center text-center m-3 w-80">
         <label htmlFor="BackgroundColorInput">Background</label>
 
         <input
           type="color"
           onChange={(e) => updateQrBackground(e.target.value)}
-          className="rounded-md p-2 bg-tertiary text-center"
+          className="rounded-md bg-tertiary text-center"
           name="BackgroundColorInput"
           id="BackgroundColorInput"
         />
       </div>
 
-      <div className="rounded-lg text-center m-3 w-80 h-16 p-6">
+      <div className="rounded-lg flex flex-col items-center text-center m-3 w-80">
         <label htmlFor="typeInput">QR Type</label>
 
         <select
@@ -127,7 +130,7 @@ function Form() {
         </select>
       </div>
 
-      <div className="rounded-lg text-center m-3 w-80 h-16 p-6">
+      <div className="rounded-lg flex flex-col items-center text-center m-3 w-80">
         <label htmlFor="extInput">Download Type</label>
 
         <select

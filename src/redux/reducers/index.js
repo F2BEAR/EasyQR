@@ -14,7 +14,7 @@ const initialState = {
   color: '#000',
   type: 'square',
   background: '#fff',
-  extension: 'jpeg'
+  extension: 'png'
 }
 
 const defaultReducer = (state = initialState, action) => {

@@ -17,11 +17,7 @@ module.exports = {
         primary: 'var(--color-bg-primary)',
         tertiary: 'var(--color-bg-tertiary)',
         secondary: 'var(--color-bg-secondary)',
-        button: 'var(--color-bg-button)',
-        blure: 'var(--color-bg-blure)',
-        error: 'var(--color-bg-error)',
-        success: 'var(--color-bg-success)',
-        warning: 'var(--color-bg-warning)'
+        button: 'var(--color-bg-button)'
       },
       textColor: {
         accent: 'var(--color-text-accent)',

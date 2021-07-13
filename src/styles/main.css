@@ -6,14 +6,10 @@ body {
 }
 
 .dark {
-  --color-bg-primary: #121212;
-  --color-bg-secondary: #333;
+  --color-bg-primary: #22272e;
+  --color-bg-secondary: #2d333b;
   --color-bg-tertiary: #424242;
   --color-bg-button: #444444;
-  --color-bg-blure: #12121288;
-  --color-bg-error: #d63e3e;
-  --color-bg-success: #3ed63e;
-  --color-bg-warning: #d3d63e;
   --color-text-primary: #f7fafc;
   --color-text-secondary: #e2e8f0;
   --color-text-accent: #81e6d9;
@@ -548,6 +544,10 @@ video {
   position: fixed;
 }
 
+.m-1 {
+  margin: 0.25rem;
+}
+
 .m-3 {
   margin: 0.75rem;
 }
@@ -564,20 +564,28 @@ video {
   display: table;
 }
 
-.h-12 {
-  height: 3rem;
+.h-7 {
+  height: 1.75rem;
 }
 
-.h-16 {
-  height: 4rem;
+.h-12 {
+  height: 3rem;
 }
 
 .h-20 {
   height: 5rem;
 }
 
-.h-screen {
-  height: 100vh;
+.h-auto {
+  height: auto;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .w-12 {
@@ -586,10 +594,6 @@ video {
 
 .w-80 {
   width: 20rem;
-}
-
-.w-96 {
-  width: 24rem;
 }
 
 .w-9\/12 {
@@ -602,6 +606,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-max {
+  width: max-content;
 }
 
 @keyframes spin {
@@ -688,10 +696,6 @@ video {
   background-color: var(--color-bg-secondary);
 }
 
-.bg-blure {
-  background-color: var(--color-bg-blure);
-}
-
 .hover\:bg-button:hover {
   background-color: var(--color-bg-button);
 }
@@ -702,10 +706,6 @@ video {
 
 .p-3 {
   padding: 0.75rem;
-}
-
-.p-6 {
-  padding: 1.5rem;
 }
 
 .p-10 {
@@ -767,6 +767,13 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:h-screen {
+    height: 100vh;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 1024px) {

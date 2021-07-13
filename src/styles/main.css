@@ -552,6 +552,10 @@ video {
   margin: 0.75rem;
 }
 
+.m-12 {
+  margin: 3rem;
+}
+
 .flex {
   display: flex;
 }
@@ -582,6 +586,14 @@ video {
 
 .w-80 {
   width: 20rem;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.w-9\/12 {
+  width: 75%;
 }
 
 .w-full {
@@ -655,6 +667,10 @@ video {
   border-radius: 0.5rem;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgba(255, 255, 255, var(--tw-border-opacity));
@@ -674,6 +690,10 @@ video {
 
 .bg-blure {
   background-color: var(--color-bg-blure);
+}
+
+.hover\:bg-button:hover {
+  background-color: var(--color-bg-button);
 }
 
 .p-2 {

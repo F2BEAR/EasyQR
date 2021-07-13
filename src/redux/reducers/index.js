@@ -1,13 +1,41 @@
-import { TOGGLE_MENU } from '../actions/actionTypes'
+import {
+  UPDATE_DATA,
+  UPDATE_IMAGE,
+  UPDATE_COLOR,
+  UPDATE_TYPE,
+  UPDATE_BACKGROUND,
+  UPDATE_EXTENSION
+} from '../actions/actionTypes'
 
 const initialState = {
-  isOpen: false
+  isOpen: false,
+  url: 'https://github.com/F2BEAR',
+  image: '',
+  color: '#000',
+  type: 'square',
+  background: '#fff',
+  extension: 'jpeg'
 }
 
 const defaultReducer = (state = initialState, action) => {
   switch (action.type) {
-    case TOGGLE_MENU: {
-      return { ...state, isOpen: !state.isOpen }
+    case UPDATE_DATA: {
+      return { ...state, url: action.payload }
+    }
+    case UPDATE_IMAGE: {
+      return { ...state, image: action.payload }
+    }
+    case UPDATE_COLOR: {
+      return { ...state, color: action.payload }
+    }
+    case UPDATE_BACKGROUND: {
+      return { ...state, background: action.payload }
+    }
+    case UPDATE_TYPE: {
+      return { ...state, type: action.payload }
+    }
+    case UPDATE_EXTENSION: {
+      return { ...state, extension: action.payload }
     }
     default:
       return state

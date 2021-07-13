@@ -18,7 +18,7 @@ const QR = () => {
   }
 
   return (
-    <div className="h-2xl w-xl flex flex-col">
+    <div className="h-2xl w-53 flex flex-col">
       <div ref={ref} className="border-2 border-white" />
       <button
         className="p-3 m-3 bg-tertiary text-primary hover:text-accent hover:bg-button rounded-lg"

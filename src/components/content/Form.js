@@ -7,10 +7,12 @@ import {
   updateBackground,
   updateExtension
 } from '../../redux/actions/actions'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 function Form() {
   const dispatch = useDispatch()
+  const color = useSelector((state) => state.color)
+  const background = useSelector((state) => state.background)
   const updateQrData = (value) => {
     if (value === '' || value === null || value === undefined) {
       value = 'https://github.com/F2BEAR'
@@ -22,7 +24,12 @@ function Form() {
   }
 
   const updateQrImg = (files) => {
-    let newQrImage = URL.createObjectURL(files)
+    let newQrImage
+    if (files === null || files === undefined) {
+      newQrImage = ''
+    } else {
+      newQrImage = URL.createObjectURL(files)
+    }
     dispatch(updateImage(newQrImage))
     qrCode.update({
       image: newQrImage
@@ -62,12 +69,12 @@ function Form() {
 
   return (
     <form className="rounded-lg shadow-lg p-10 h-2xl w-max m-3 flex flex-col justify-center items-center bg-secondary">
-      <div className="rounded-lg flex flex-col items-center text-center m-3 w-80">
+      <div className="rounded-lg flex flex-col items-center text-center m-3 w-52 md:w-80">
         <label htmlFor="dataInput">Data</label>
 
         <input
           type="text"
-          className="rounded-md p-2 bg-tertiary text-center"
+          className="rounded-md p-2 bg-tertiary text-center m-3"
           name="urlInput"
           onChange={(e) => updateQrData(e.target.value)}
           id="urlInput"
@@ -76,49 +83,51 @@ function Form() {
         />
       </div>
 
-      <div className="rounded-lg flex flex-col items-center text-center m-3 w-80">
+      <div className="rounded-lg flex flex-col items-center text-center m-3 w-52 md:w-80">
         <label htmlFor="imageInput">Image</label>
 
         <input
           type="file"
           onChange={(e) => updateQrImg(e.target.files[0])}
-          className="rounded-md p-2 bg-tertiary text-center"
+          className="rounded-md w-40 p-2 bg-tertiary text-center m-3"
           name="imageInput"
           id="imageInput"
           accept="image/*"
         />
       </div>
 
-      <div className="rounded-lg flex flex-col items-center text-center m-3 w-80">
+      <div className="rounded-lg flex flex-col items-center text-center m-3 w-52 md:w-80">
         <label htmlFor="colorInput">Color</label>
 
         <input
           type="color"
           onChange={(e) => updateQrColor(e.target.value)}
-          className="rounded-md bg-tertiary text-center"
+          value={color}
+          className="rounded-md bg-tertiary text-center m-3"
           name="colorInput"
           id="colorInput"
         />
       </div>
 
-      <div className="rounded-lg flex flex-col items-center text-center m-3 w-80">
+      <div className="rounded-lg flex flex-col items-center text-center m-3 w-52 md:w-80">
         <label htmlFor="BackgroundColorInput">Background</label>
 
         <input
           type="color"
           onChange={(e) => updateQrBackground(e.target.value)}
-          className="rounded-md bg-tertiary text-center"
+          value={background}
+          className="rounded-md bg-tertiary text-center m-3"
           name="BackgroundColorInput"
           id="BackgroundColorInput"
         />
       </div>
 
-      <div className="rounded-lg flex flex-col items-center text-center m-3 w-80">
+      <div className="rounded-lg flex flex-col items-center text-center m-3 w-52 md:w-80">
         <label htmlFor="typeInput">QR Type</label>
 
         <select
           name="typeInput"
-          className="rounded-md p-2 bg-tertiary text-center"
+          className="rounded-md p-2 bg-tertiary text-center m-3"
           id="typeInput"
           onChange={(e) => updateQrType(e.target.value)}
         >
@@ -130,12 +139,12 @@ function Form() {
         </select>
       </div>
 
-      <div className="rounded-lg flex flex-col items-center text-center m-3 w-80">
+      <div className="rounded-lg flex flex-col items-center text-center m-3 w-52 md:w-80">
         <label htmlFor="extInput">Download Type</label>
 
         <select
           name="extInput"
-          className="rounded-md p-2 bg-tertiary text-center"
+          className="rounded-md p-2 bg-tertiary text-center m-3"
           id="extInput"
           onChange={(e) => updateQrExt(e.target.value)}
         >

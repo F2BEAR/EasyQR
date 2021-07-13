@@ -592,8 +592,12 @@ video {
   width: 3rem;
 }
 
-.w-80 {
-  width: 20rem;
+.w-40 {
+  width: 10rem;
+}
+
+.w-52 {
+  width: 13rem;
 }
 
 .w-9\/12 {
@@ -769,6 +773,10 @@ video {
 @media (min-width: 768px) {
   .md\:h-screen {
     height: 100vh;
+  }
+
+  .md\:w-80 {
+    width: 20rem;
   }
 
   .md\:flex-row {

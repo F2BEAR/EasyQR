@@ -1,6 +1,8 @@
 {
   "short_name": "EasyQR",
   "name": "EasyQR",
+  "description": "A simple QR generator",
+  "lang": "en-US",
   "icons": [
     {
       "src": "favicon.ico",
@@ -19,7 +21,7 @@
     }
   ],
   "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "display": "fullscreen",
+  "theme_color": "#22272e",
+  "background_color": "#22272e"
 }

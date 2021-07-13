@@ -11,9 +11,9 @@ const initialState = {
   isOpen: false,
   url: 'https://github.com/F2BEAR',
   image: '',
-  color: '#000',
+  color: '#000000',
   type: 'square',
-  background: '#fff',
+  background: '#ffffff',
   extension: 'png'
 }
 

@@ -68,7 +68,7 @@ function Form() {
   }
 
   return (
-    <form className="rounded-lg shadow-lg p-10 h-2xl w-max m-3 flex flex-col justify-center items-center bg-secondary">
+    <form className="rounded-lg shadow-lg p-10 h-2xl w-max ml-3 mr-3 mb-3 flex flex-col justify-center items-center bg-secondary">
       <div className="rounded-lg flex flex-col items-center text-center m-3 w-52 md:w-80">
         <label htmlFor="dataInput">Data</label>
 
@@ -79,7 +79,6 @@ function Form() {
           onChange={(e) => updateQrData(e.target.value)}
           id="urlInput"
           placeholder="https://example.com"
-          required
         />
       </div>
 
@@ -89,7 +88,7 @@ function Form() {
         <input
           type="file"
           onChange={(e) => updateQrImg(e.target.files[0])}
-          className="rounded-md w-40 p-2 bg-tertiary text-center m-3"
+          className="flex flex-col rounded-md p-2 bg-tertiary text-center mt-3"
           name="imageInput"
           id="imageInput"
           accept="image/*"
@@ -103,7 +102,7 @@ function Form() {
           type="color"
           onChange={(e) => updateQrColor(e.target.value)}
           value={color}
-          className="rounded-md bg-tertiary text-center m-3"
+          className="w-16 h-8 p-px rounded-md bg-tertiary text-center m-3"
           name="colorInput"
           id="colorInput"
         />
@@ -116,7 +115,7 @@ function Form() {
           type="color"
           onChange={(e) => updateQrBackground(e.target.value)}
           value={background}
-          className="rounded-md bg-tertiary text-center m-3"
+          className="w-16 h-8 p-px rounded-md bg-tertiary text-center m-3"
           name="BackgroundColorInput"
           id="BackgroundColorInput"
         />

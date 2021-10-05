@@ -1,11 +1,13 @@
 import Home from './content/Home'
 import Header from './content/Header'
+import Footer from './content/Footer'
 
 function App() {
   return (
-    <div className="dark w-screen h-full md:h-screen bg-primary text-primary flex flex-col items-center">
+    <div className="dark w-full h-full bg-primary text-primary flex flex-col items-center">
       <Header />
       <Home />
+      <Footer />
     </div>
   )
 }

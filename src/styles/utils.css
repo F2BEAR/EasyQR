@@ -1,19 +1,35 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 2px solid rgb(43, 43, 43);
+  -webkit-text-fill-color: #f7fafc;
+  -webkit-box-shadow: 0 0 0px 1000px #121212 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 ::-webkit-scrollbar {
   width: 15px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-bg-secondary);
+  background: #2d333b;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-text-secondary);
+  background: #424242;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-text-accent);
+  background: #444444;
 }
 
-* {
-  box-sizing: border-box;
+body {
+  background-color: #22272e;
 }

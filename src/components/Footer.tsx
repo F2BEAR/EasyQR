@@ -13,12 +13,12 @@ export default function Footer() {
 				</a>{' '}
 				, hosted at{' '}
 				<a
-					href="https://stratus.services"
+					href="https://railway.app?referralCode=TaMRb-"
 					rel="noopener noreferrer"
 					target="_blank"
 					className="text-purple-500"
 				>
-					Stratus
+					Railway🚄
 				</a>
 			</p>
 		</div>

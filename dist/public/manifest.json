@@ -4,18 +4,18 @@
     "src": "src/assets/easyqr.svg"
   },
   "index.html": {
-    "file": "assets/index.85da37c0.js",
+    "file": "assets/index.e7455d1d.js",
     "src": "index.html",
     "isEntry": true,
     "css": [
-      "assets/index.9f4631b2.css"
+      "assets/index.4e8e35be.css"
     ],
     "assets": [
       "assets/easyqr.8380c54c.svg"
     ]
   },
   "index.css": {
-    "file": "assets/index.9f4631b2.css",
+    "file": "assets/index.4e8e35be.css",
     "src": "index.css"
   }
 }

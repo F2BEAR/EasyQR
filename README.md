@@ -8,4 +8,6 @@ I had updated this from the version on the Medium article to a React application
 
 EasyQR is now hosted on [Railway](https://railway.app?referralCode=TaMRb-)🚆 , and now you can make your QR codes with EasyQR [here](https://easyqr-production.up.railway.app)!
 
+UptimeRobot: https://stats.uptimerobot.com/KvjlgIDwj1
+
 Don't forget that all the code hosted on my GitHub account is open-source and made with tons of love, so if you want to contribute with what I do, you can always [buy me a coffee](https://buymeacoffee.com/F2BEAR) 💖

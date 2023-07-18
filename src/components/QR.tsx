@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useRef } from 'react'
 import { useQR } from '../context/QRContext'
 import QRCodeStyling from "qr-code-styling"

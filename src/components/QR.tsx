@@ -14,10 +14,10 @@ export const qrCode = new QRCodeStyling({
 
 export default function QR() {
   const { qr } = useQR()
-  const ref:any = useRef(null);
+  const ref = useRef(null);
 
   useEffect(() => {
-    qrCode.append(ref.current);
+    qrCode.append(ref.current ?? undefined);
   }, [])
 
   useEffect(() => {

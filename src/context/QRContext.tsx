@@ -1,5 +1,4 @@
 import { createContext, ReactNode, useContext, useState } from 'react'
-import { qrCode } from '../components/QR'
 
 type QrProviderProps = {
 	children: ReactNode

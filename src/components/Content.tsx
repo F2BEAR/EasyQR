@@ -1,9 +1,13 @@
 'use client'
-import { QRProvider } from '@/context/QRContext'
+import dynamic from 'next/dynamic'
 import Form from './Form'
-import QR from './QR'
+import { QRProvider } from '@/context/QRContext'
 
 function Content() {
+	const QR = dynamic(() => import('@/components/QR'), {
+		loading: () => <p>Loading...</p>,
+		ssr: false
+	})
 	return (
 		<QRProvider>
 			<div className="flex justify-center flex-col gap-4 lg:flex-row-reverse items-center">

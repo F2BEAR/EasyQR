@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 		title: 'EasyQR',
 		description: 'A simple QR code generator',
 		siteName: 'EasyQR',
-    url: 'https://easy-ccevp6lmf-f2bear.vercel.app',
+    url: 'https://easy-qr-dusky.vercel.app/',
 		images: [
 			{
 				url: '/logo192.png',
